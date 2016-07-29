@@ -1,0 +1,24 @@
+## keras-nn_epochs30-bs16-score0.50328
+    model = Sequential()
+    model.add(Dense(dims, 512, init='glorot_uniform'))
+    model.add(PReLU((512,)))
+    model.add(BatchNormalization((512,)))
+    model.add(Dropout(0.5))
+
+    model.add(Dense(512, 512, init='glorot_uniform'))
+    model.add(PReLU((512,)))
+    model.add(BatchNormalization((512,)))
+    model.add(Dropout(0.5))
+    
+    model.add(Dense(512, 512, init='glorot_uniform'))
+    model.add(PReLU((512,)))
+    model.add(BatchNormalization((512,)))
+    model.add(Dropout(0.5))
+
+    model.add(Dense(512, nb_classes, init='glorot_uniform'))
+    model.add(Activation('softmax'))
+
+    model.compile(loss='categorical_crossentropy', optimizer="adam")
+
+
+
